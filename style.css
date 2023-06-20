@@ -198,6 +198,17 @@ header h1 {
   background-color: grey;
 }
 
+/* Loading Text */
+#loadingText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 23px;
+  color: white;
+  /*  color: rgb(42, 208, 42); */
+}
+
 /* curves */
 .custom-shape-divider-bottom-1686304992 {
   position: absolute;

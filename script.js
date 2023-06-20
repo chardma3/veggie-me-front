@@ -31,3 +31,16 @@ fetch("http://127.0.0.1:8000/restaurants")
 /* hamburgerBtn.addEventListener("click", () => {
   dropdownMenu.classList.toggle("show");
 }); */
+
+const loadingText = document.getElementById("loadingText");
+
+loadingText.textContent =
+  "Finding the best restaurants in Amsterdam, Stockholm, Paris...";
+
+setTimeout(() => {
+  loadingText.textContent = "Barcelona, London, Berlin...";
+}, 1500);
+
+setTimeout(() => {
+  loadingText.textContent = "";
+}, 2900);
