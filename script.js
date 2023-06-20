@@ -3,7 +3,7 @@ const feedDisplay = document.querySelector("#feed");
 const hamburgerBtn = document.querySelector(".hamburger-btn");
 const dropdownMenu = document.querySelector(".dropdown-menu");
 
-fetch("http://127.0.0.1:8000/restaurants")
+fetch("https://veggie-me-api-production.up.railway.app/restaurants")
   .then((response) => {
     if (!response.ok) {
       throw new Error("Error fetching restaurants");
@@ -18,7 +18,7 @@ fetch("http://127.0.0.1:8000/restaurants")
         <p>Cuisine: ${rest.cuisine}</p>
         <p>Rating: ${rest.rating}</p>
         <p>Review Count: ${rest.reviewCount}</p>
-        <a href="${rest.link}">Website</a>
+        <a href="${rest.link}" target="_blank">Website</a>
       </div>`;
       feedDisplay.insertAdjacentHTML("beforeend", restaurant);
     });
