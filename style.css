@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Ultra&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
+  background-color: black;
+  color: white;
+}
+
+header {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right, blue, rgb(103, 233, 103));
+}
+
+.toggle-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 0 60px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  column-gap: 20px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  column-gap: 20px;
+}
+
+header h1 {
+  color: white;
+  font-family: "Delicious Handrawn", cursive;
+  margin: 30px;
+  font-size: 65px;
+}
+
+/* Buttons */
+.button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.1s;
+  cursor: pointer;
+}
+
+.button-green {
+  border-radius: 20px;
+  background-color: #4caf50;
+  color: white;
+}
+
+.button-green:hover {
+  background-color: #409442;
+  color: white;
+}
+
+.button-blue {
+  border-radius: 20px;
+  background-color: blue;
+  color: white;
+}
+
+.button-blue:hover {
+  background-color: rgb(1, 1, 223);
+  color: white;
+}
+
+.button-red {
+  border-radius: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.button-red:hover {
+  background-color: #bf3228;
+  color: white;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  /*   background-color: #fff; */
+  padding: 10px;
+}
+
+.dropdown-menu {
+  display: block;
+  margin-bottom: 10px;
+  background-color: black;
+  width: 300px;
+}
+
+.dropdown-menu button {
+  display: block;
+  margin-bottom: 10px;
+  border: none;
+  text-align: center;
+  /*   background-color: none; */
+  font-size: 50px;
+  color: black;
+}
+
+.dropdown-menu button {
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* body */
+.container {
+  margin: auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /*  border: 1px solid white; */
+}
+
+.flex {
+  display: flex;
+}
+
+.feed {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.feed div {
+  width: 300px;
+  height: 320px;
+  border: 1px #fff solid;
+  border-radius: 2px;
+}
+
+.feed h3 {
+  margin: 10px;
+  padding: 5px;
+}
+.feed p {
+  padding: 5px;
+  margin: 7px;
+  margin-bottom: 20px;
+}
+
+.feed a {
+  border: solid 1px white;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  padding: 11px 20px;
+}
+
+.feed a:hover {
+  text-decoration: none;
+  background-color: grey;
+}
+
+/* curves */
+.custom-shape-divider-bottom-1686304992 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1686304992 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 90px;
+}
+
+.custom-shape-divider-bottom-1686304992 .shape-fill {
+  fill: black;
+}
+
+/* Media queries */
+@media screen and (max-width: 770px) {
+  .right {
+    display: none;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 10px;
+  }
+
+  /*  .dropdown-menu button {
+    display: block;
+    margin-bottom: 10px;
+  } */
+
+  .dropdown-menu.show {
+    display: block;
+  }
+}
+
+@media (max-width: 1000px) {
+  .feed {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .feed {
+    grid-template-columns: 1fr;
+  }
+}
