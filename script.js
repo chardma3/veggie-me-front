@@ -24,7 +24,7 @@ fetch("https://veggie-me-api-production.up.railway.app/restaurants")
     });
   })
   .catch((err) => {
-    const errorMessage = `<p> Oh No! There is an Error: ${err.message} </p>`;
+    const errorMessage = `<p class="err-msg"> Oh No! There is an Error: ${err.message} </p>`;
     feedDisplay.insertAdjacentHTML("beforeend", errorMessage);
   });
 

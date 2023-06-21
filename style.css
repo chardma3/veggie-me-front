@@ -198,6 +198,13 @@ header h1 {
   background-image: linear-gradient(to right, #40c9ff, #e81cff);
 }
 
+.err-msg {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
 /* Loading Text */
 #loadingText {
   position: absolute;
