@@ -21,6 +21,7 @@ fetch("https://veggie-me-api-production.up.railway.app/restaurants")
         <a href="${rest.link}" target="_blank">Website</a>
       </div>`;
       feedDisplay.insertAdjacentHTML("beforeend", restaurant);
+      loadingText.textContent = "";
     });
   })
   .catch((err) => {
@@ -40,7 +41,3 @@ loadingText.textContent =
 setTimeout(() => {
   loadingText.textContent = "Barcelona, London, Berlin...";
 }, 1500);
-
-setTimeout(() => {
-  loadingText.textContent = "";
-}, 2900);
