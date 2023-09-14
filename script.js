@@ -3,7 +3,7 @@ const feedDisplay = document.querySelector("#feed");
 const hamburgerBtn = document.querySelector(".hamburger-btn");
 const dropdownMenu = document.querySelector(".dropdown-menu");
 
-fetch("https://veggie-me-api-production.up.railway.app/restaurants")
+fetch("https://veggi-me-api.onrender.com/restaurants")
   .then((response) => {
     if (!response.ok) {
       throw new Error("Error fetching restaurants");
